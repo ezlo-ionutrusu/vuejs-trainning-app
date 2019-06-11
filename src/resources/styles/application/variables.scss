@@ -1,0 +1,25 @@
+@import "../libraries/bulma/sass/utilities/initial-variables.sass";
+@import "../libraries/bulma/sass/utilities/functions.sass";
+
+$family-primary: Arial,sans-serif;
+$images: "../images/";
+$client-color:#111020;
+$second-client-color: #1e8dce;
+$loading-container-bg: #1e8dce;
+$loading-text-color:$white;
+$second-client-color-invert: findColorInvert($second-client-color) !default;
+$input-border-color:#bbb;
+
+$link: $second-client-color !default
+$link-invert: $second-client-color-invert !default
+$link-visited: $second-client-color !default
+
+$link-hover: darken($second-client-color, 5%) !default
+$link-hover-border: darken($second-client-color, 2%) !default
+
+$link-focus: darken($second-client-color, 5%) !default
+$link-focus-border: $second-client-color !default
+
+$link-active: darken($second-client-color, 5%) !default
+$link-active-border: darken($second-client-color, 5%) !default
+

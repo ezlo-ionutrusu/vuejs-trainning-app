@@ -1,0 +1,143 @@
+{
+  "category_id": "50",
+  "wizard": {
+    "name": "Lyric T5 Wi-Fi Thermostat -  <-Model->",
+    "countable_steps": 2,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 5,
+        "step_headline": {
+          "lang_tag": "ui7_lyric_square_t5_headline",
+          "text": "Honeywell T5 Lyric Wi-Fi Thermostat"
+        },
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_lyric_square_t5_p1",
+                "text": "Follow supplied instructions in the Installation Manual to connect the Honeywell Lyric Thermostat to your HVAC system.<br/><br/>Before connecting your Lyric Thermostat with your Vera Controller, it must be setup on the Lyric App.<br/><br/>Please download the Lyric App on your smartphone or tablet from either the App Store or Google play.<br/><br/>Create an account and register your Lyric Thermostat if you haven't already done so."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_lyric_square_t5_p2",
+                "text": "Then press the Install button."
+              }
+            ]
+          }
+        ],
+        "require_terms_accept": "0",
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "honeywell_lyric_t5_square_i1.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_wizard_lang_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_general_ucase_install",
+              "text": "Install"
+            },
+            "custom_attr": "plugin_install_button",
+            "button_command": [
+              {
+                "command_type": "install_plugin",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": 2,
+        "template": 6,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_lyric_square_t5_p3",
+                "text": "Installing plugin. Please wait..."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_add": "plugin_added",
+            "action": {
+              "type": "action_plugin_configure",
+              "argument": 1
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_wizard_lang_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

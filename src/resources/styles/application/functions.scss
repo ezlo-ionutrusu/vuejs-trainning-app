@@ -1,0 +1,142 @@
+@mixin colorInputPlaceholders($color)
+{
+    &::-webkit-input-placeholder
+    {
+        color: $color;
+        text-transform: none;
+    }
+
+    &:-moz-placeholder
+    {
+        color: $color;
+        text-transform: none;
+    }
+
+    &::-moz-placeholder
+    {
+        color: $color;
+        text-transform: none;
+    }
+
+    &:-ms-input-placeholder
+    {
+        color: $color;
+        text-transform: none;
+    }
+}
+
+@mixin blur($pixels)
+{
+    -webkit-filter: blur($pixels);
+    -moz-filter: blur($pixels);
+    -o-filter: blur($pixels);
+    -ms-filter: blur($pixels);
+    filter: blur($pixels);
+}
+
+@mixin box-sizing($type)
+{
+    -moz-box-sizing: $type;
+    -webkit-box-sizing: $type;
+    box-sizing: $type;
+}
+
+@mixin borderRadius($radius)
+{
+    border-radius: $radius;
+}
+
+@mixin transform($type)
+{
+    -moz-transform: $type;
+    -ms-transform: $type;
+    -o-transform: $type;
+    -webkit-transform: $type;
+    transform: $type;
+}
+
+@mixin transform-origin($type)
+{
+    -moz-transform-origin: $type;
+    -ms-transform-origin: $type;
+    -o-transform-origin: $type;
+    -webkit-transform-origin: $type;
+    transform-origin: $type;
+}
+
+@mixin text-overflow($type)
+{
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+@mixin transition($type)
+{
+    -moz-transition: $type;
+    -o-transition: $type;
+    -webkit-transition: $type;
+    transition: $type;
+}
+
+@mixin textShadow($a: 0px,$b: 0px,$c: 0px,$color: #000)
+{
+    -webkit-text-shadow: $a $b $c $color;
+    text-shadow: $a $b $c $color;
+}
+
+@mixin wordWrap($type: break-word)
+{
+    -ms-word-wrap: $type;
+    word-wrap: $type;
+}
+
+@mixin box-shadow($type)
+{
+    box-shadow: $type;
+}
+
+@mixin background-origin($type)
+{
+    -moz-background-origin: $type;
+    -webkit-background-origin: $type;
+    background-origin: $type;
+}
+
+@mixin background-clip($type)
+{
+    -moz-background-clip: $type;
+    -webkit-background-clip: $type;
+    background-clip: $type;
+}
+
+@mixin background-origin2($type1,$type2)
+{
+    -moz-background-origin: $type1,$type2;
+    -webkit-background-origin: $type1,$type2;
+    background-origin: $type1,$type2;
+}
+
+@mixin background-clip2($type1,$type2)
+{
+    -moz-background-clip: $type1,$type2;
+    -webkit-background-clip: $type1,$type2;
+    background-clip: $type1,$type2;
+}
+
+@mixin animation($type)
+{
+    -moz-animation: $type;
+    -o-animation: $type;
+    -webkit-animation: $type;
+    animation: $type;
+}
+
+@mixin animation-delay($type)
+{
+    -moz-animation-delay: $type;
+    -o-animation-delay: $type;
+    -webkit-animation-delay: $type;
+    animation-delay: $type;
+}
+

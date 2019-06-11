@@ -1,0 +1,132 @@
+.is-transparent {
+    background: transparent !important;
+}
+$num: 0;
+
+@while $num < 31
+{
+     .pa-#{$num}
+     {
+          padding: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 51
+{
+     .pt-#{$num}
+     {
+          padding-top: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 51
+{
+     .pb-#{$num}
+     {
+          padding-bottom: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 51
+{
+     .pl-#{$num}
+     {
+          padding-left: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 51
+{
+     .pr-#{$num}
+     {
+          padding-right: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 31
+{
+     .ma-#{$num}
+     {
+          margin: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 96
+{
+     .mt-#{$num}
+     {
+          margin-top: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 96
+{
+     .mb-#{$num}
+     {
+          margin-bottom: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 61
+{
+     .ml-#{$num}
+     {
+          margin-left: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+$num: 0;
+
+@while $num < 61
+{
+     .mr-#{$num}
+     {
+          margin-right: $num +0px !important;
+     }
+
+     $num: $num +5;
+}
+
+.ml-auto
+{
+     margin-left: auto !important;
+}
+
+.mr-auto
+{
+     margin-right: auto !important;
+}

@@ -1,0 +1,267 @@
+@charset "utf-8";
+@import "application/variables.scss";
+@import "application/helpers.scss";
+@import "application/functions.scss";
+@import "libraries/bulma/index.sass";
+
+@import "@/main/styles/index.scss";
+@import "@/devices/styles/index.scss";
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+     font-weight: 800;
+}
+
+html
+{
+     height: 100%;
+     overflow: auto;
+}
+
+body
+{
+	padding: 0;
+	margin: 0;
+	min-height: 100%;
+	width: 100%;
+
+
+	div
+	{
+
+		&.app
+		{
+			position: relative;
+			$MainleftsideWidth: 250px;
+
+			.left-side
+			{
+				position: fixed;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				z-index: 9999;
+				width: $MainleftsideWidth;
+				background: #2a2b30;
+				text-align: center;
+				z-index: 22;
+				color: $white;
+
+				.first-block
+				{
+					min-height: 200px;
+					color: $white;
+					background: $second-client-color;
+					position: relative;
+
+
+					.first-block-text
+					{
+						position: absolute;
+						top: 50%;
+						left: 15px;
+						right: 15px;
+						@include transform(translateY(-50%));
+
+						.title
+						{
+							text-transform: uppercase;
+
+							+ .title
+							{
+								font-weight: normal;
+							}
+						}
+					}
+				}
+
+				nav
+				{
+					&.nav-menu
+					{
+						ul
+						{
+							margin-top: 0;
+							margin-bottom: 1rem;
+
+							li
+							{
+								font-size: 12px;
+								letter-spacing: 1px;
+								border-bottom: 1px solid #202125;
+								text-align: left;
+
+								&.is-active
+								{
+									a
+									{
+										color: $second-client-color;
+									}
+								}
+
+								a
+								{
+									&:hover
+									{
+										color: $white;
+									}
+								}
+
+								a
+								{
+									color: $grey-light;
+									display: block;
+									line-height: 50px;
+									padding-left: 70px;
+									position: relative;
+									font-size: 14px;
+
+									i
+									{
+										font-size: 17px;
+									}
+
+									&.router-link-exact-active
+									{
+										color: $second-client-color !important;
+									}
+								}
+							}
+						}
+					}
+
+					&.navbar
+					{
+						@media(max-width: 1080px)
+						{
+							.navbar-menu
+							{
+								&.is-active
+								{
+									position: absolute;
+									left: 10px;
+									right: 10px;
+								}
+
+								.tabs
+								{
+									ul
+									{
+										display: block;
+
+										li
+										{
+											.router-link-exact-active
+											{
+												color: $second-client-color;
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.navbar-brand
+						{
+							.navbar-item
+							{
+								flex-direction: column;
+								text-align: left;
+								font-size: 20px;
+								color: #fff;
+
+								@media(max-width: $tablet)
+								{
+									font-size: unset;
+								}
+
+								@media(max-width: 568px)
+								{
+									font-size: 12px;
+								}
+
+								span
+								{
+									align-self: stretch;
+									display: block;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.right-side
+			{
+				float: right;
+				width: calc(100% - #{$MainleftsideWidth});
+				position: relative;
+				background-color: #fff;
+				height: 100vh;
+				padding: 1.5rem;
+				overflow:auto;
+			}
+
+			@include touch
+			{
+				.right-side
+				{
+					height: auto;
+				}
+
+				.left-side
+				{
+					.navbar
+					{
+						.navbar-burger
+						{
+							height: 3rem;
+							width: 3rem;
+							color: $second-client-color;
+							background: $white;
+							border-radius: 50%;
+							margin-top: 2px;
+						}
+					}
+				}
+			}
+
+			@include mobile
+			{
+				.left-side
+				{
+					right: 0;
+					bottom: unset;
+					width: auto;
+					padding: 20px;
+
+					&.is-transparent
+					{
+						background: transparent;
+					}
+				}
+
+				.right-side
+				{
+					float: none;
+					width: 100%;
+					padding-top: 128px;
+
+					@media(max-width: 568px)
+					{
+						padding-top: 92px;
+                    }
+				}
+			}
+		}
+	}
+}
