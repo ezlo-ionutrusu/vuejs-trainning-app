@@ -1,0 +1,258 @@
+{
+  "category_id": "",
+  "wizard": {
+    "name": "VistaCam 1200 -  <-Model->",
+    "countable_steps": 5,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_vcam_1200_step1",
+                "text": "<b>VistaCam 1200</b><br/><br>Before setting up your VistaCam 1200 Doorbell Camera, please charge the camera for at least 30 minutes utilizing the included micro USB cable and your mobile device charger. Remove the rubber cover from the back of the camera to reveal the micro USB port. Leave the camera's ON/OFF switch next to the USB port in the OFF position during the charging process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam_1200_step1.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_vcam_1200_step2",
+                "text": "Once the camera has been charged for at least 30 minutes, disconnect the USB cable from\nthe back of the camera. Use a Pencil or Pen to slide the ON/OFF switch to the ON (Up) position. The front LED Button of the camera will turn blue."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam_1200_step2.png"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 5
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 3
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": 3,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_vcam_1200_step3",
+                "text": "Choose which Vera Controller you have:\n<br/><br/><b>VeraEdge</b>\n<ul><li>Press and hold the WPS button on your VeraEdge for 5 seconds.</li><li>Then, press and hold the front button of the Doorbell Camera for 5 seconds to 'pair' it with the Vera controller.</li><li>Once the button is released on the Doorbell Camera, the LED on the front of the camera will begin blinking amber indicating the pairing process is ongoing.</li></ul>\n<b>VeraPlus</b> & <b>VeraSecure</b><br/>\n<ul><li>Press the Select button on your controller. It will enter in selection mode.</li><li>Continue to press and release the Select button until the Wi-Fi LED on your controller starts blinking.</li><li>Then, press on the Sync button to confirm selection of Wi-Fi LED and execute WPS mode.<br>\n<b>Note</b>: While in WPS mode, the Wi-Fi LED will blink rapidly. <br>The unit stays in WPS mode for 2 minutes.</li><li>Now, press and hold the front button of the Doorbell Camera for 5 seconds to 'pair' it with the Vera controller.</li><li>Once the button is released on the Doorbell Camera, the LED on the front of the camera will begin blinking amber indicating the pairing process is ongoing.</li></ul>"
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam_1200_step3.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 4,
+        "template": 10,
+        "text_content": [
+
+        ],
+        "buttons": [
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_general_ucase_retry",
+              "text": "Retry"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 5,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_found_camera",
+                "text": "The camera was added.  Watch the live video as well as recorded video clips under the Cameras section.  By default whenever there is an alert in the house, like tripping a motion, door, smoke or flood sensor, the camera will automatically archive 15 - 20 seconds of video(depending on camera model).  You can change this by editing the Preset Modes on the dashboard."
+              }
+            ]
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "template": 1,
+        "reset_step": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_vcam_1200_reset_t1",
+                "text": "Press and hold the Reset Button using a paperclip for at least 10 seconds until the front LED Button turns amber. The front LED Button will momentarily turn off, and if the reset is successful, will turn blue."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_vcam_1200_reset_t2",
+                "text": "Click the 'Try Adding It Again' button to restart the pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam_1200_reset.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 3,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_add_again",
+              "text": "Try adding it again"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

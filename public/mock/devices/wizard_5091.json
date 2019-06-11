@@ -1,0 +1,490 @@
+{
+  "category_id": "120",
+  "wizard": {
+    "name": "Swipe - Fibaro FGGC-001",
+    "countable_steps": 4,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "step_headline": {
+          "lang_tag": "ui7_kitdevice_5091_headline",
+          "text": "Fibaro Swipe"
+        },
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_type": "manual",
+            "target": "",
+            "group_text": {
+              "lang_tag": "",
+              "text": ""
+            }
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_1_11",
+                "text": "First remove the front magnet cover. Then remove the Swipe from the back case by sliding the device down with your thumbs."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 2,
+            "group_image": "fibaro_swipe_flip_remove.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": " ",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": ""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_3_01",
+                "text": "Use the provided USB cable to power the Swipe. First connect the appropriate end of the micro USB cable to the USB port on the back of the Swipe. Now connect the other end of the USB cable to any USB port on a computer or a mobile phone charger."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_3_11",
+                "text": "Press the Next button below to begin pairing."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "fibaro_swipe_usb.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 3,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_4_01",
+                "text": "To pair your Swipe, use a small screwdriver or pen to press the B-button three times within one second. The LED will begin blinking Blue then turn Green and then turn Off indicating successful inclusion.\n<br><br>\n<b>Note:</b> After successfully including the Swipe to your controller, you may choose to remove the USB cable and power the Swipe via batteries by remounting it back into the provided back battery case."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_4_11",
+                "text": "If the Swipe isn't detected in 60 seconds, click the 'Retry' button below to begin un-pairing the Swipe."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "fibaro_swipe_pair.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 5
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_reset",
+              "text": "Retry"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 4,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_install_device_name_room_step",
+                "text": "Add a name for the device and assign it to a room."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          },
+          {
+            "command_type": "event",
+            "event_remove": "device_removed"
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "template": 1,
+        "reset_step": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_reset_intro",
+                "text": "The Vera Controller will now begin to un-pair your Swipe."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_6_02",
+                "text": "With a small screwdriver or pen, Press the B-button three times within one second. The LED will blink red and then turn off indicating successful exclusion."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_6_11",
+                "text": "Click the 'Try Adding It Again' button to restart the pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "fibaro_swipe_unpair.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "exclude_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_removed",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 1
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_add_again",
+              "text": "Try adding it again"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_5091_step_6_02",
+                "text": "With a small screwdriver or pen, Press the B-button three times within one second. The LED will blink red and then turn off indicating successful exclusion."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "fibaro_swipe_unpair.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "exclude_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_removed",
+            "action": {
+              "type": "action_exit_wizard",
+              "argument": 3
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

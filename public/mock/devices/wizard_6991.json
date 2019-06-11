@@ -1,0 +1,464 @@
+{
+  "category_id": "95",
+  "wizard": {
+    "name": "Security Keypad - CentraLite 3400",
+    "countable_steps": 4,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "step_headline": {
+          "lang_tag": "ui7_kitdevice_6991_headline",
+          "text": "Centralite 3-Series Security Keypad"
+        },
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_type": "manual",
+            "target": "",
+            "group_text": {
+              "lang_tag": "",
+              "text": ""
+            }
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_1_11",
+                "text": "Remove the battery cover by pushing it upwards. Remove the mounting bracket (if installed) by sliding it downward. Ensure your Keypad is within 15 feet (5 meters) of your controller during this setup process."
+              }
+            ]
+          },
+          {
+            "static_group": 3,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 2,
+            "group_image": "centralite_keypad_3400_screen1_v2.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": ""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_3_01",
+                "text": "Remove the Pull Tab to activate the CR123A batteries as shown below. The keypad will light up for approximately 5 seconds. To begin the joining process, click the 'Next' button below."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "centralite_keypad_3400_screen2_v2.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 3,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_4_01",
+                "text": "The network icon on the bottom left will start blinking three times every three seconds, indicating that the Keypad is ready to join the network.<br/><br/>The Keypad will automatically be detected, and the network icon will start blinking rapidly."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_4_11",
+                "text": "If the Security Keypad isn't detected in the next 60 seconds, click the 'Retry' button below to begin the reset process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "centralite_keypad_3400_screen3.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_reset",
+              "text": "Retry"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ]
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 5
+            }
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 4,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_install_device_name_room_step",
+                "text": "Add a name for the device and assign it to a room."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_5_01",
+                "text": "Press and hold the Tamper Button for two seconds and release. The network LED indicator will stop blinking and turn solid green."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "centralite_keypad_3400_screen5.png"
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "template": 1,
+        "reset_step": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_zigbee_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin to reset this device."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_6_02",
+                "text": "To reset your Keypad, start by removing the batteries. While keeping the Tamper Button pressed, re-insert one battery. Once the Keypad illuminates, release the Tamper Button.<br/><br/> The network icon on the front bottom left will start blinking three times every three seconds, indicating the device has successfully reset. Re-insert the second battery to begin pairing the device."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_6_11",
+                "text": "Click 'Try Adding It Again' button to begin the joining process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "centralite_keypad_3400_screen4.png"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_add_again",
+              "text": "Try adding it again"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_6991_step_6_02",
+                "text": "To reset your Keypad, start by removing the batteries. While keeping the Tamper Button pressed, re-insert one battery. Once the Keypad illuminates, release the Tamper Button.<br/><br/> The network icon on the front bottom left will start blinking three times every three seconds, indicating the device has successfully reset. Re-insert the second battery to begin pairing the device."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "centralite_keypad_3400_screen4.png"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_cpanel_delete_device",
+              "text": "Delete Device"
+            },
+            "button_command": [
+              {
+                "command_type": "delete_zigbee_navigate",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

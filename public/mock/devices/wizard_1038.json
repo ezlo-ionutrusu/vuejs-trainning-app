@@ -1,0 +1,249 @@
+{
+  "category_id": "",
+  "wizard": {
+    "name": "VistaCam 1000 -  <-Model->",
+    "countable_steps": 6,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_1038_step_1_01",
+                "text": "Screw the VistaCam 1000 on its stand.<br><br>\nConnect the micro USB adapter into the micro USB port on the back of the camera. Now connect the other end of the adapter to an Ethernet cable and connect it to an open port on your router."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam1000_wired_ethernet.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_1038_step_2_01",
+                "text": "Put one end of the AC Power Adapter through the Plastic Cap.<br>\nPut the Rubber grommet over the AC Power Adapter to ensure connection is waterproof.<br>\nScrew on the Plastic Cap to the back of Camera.<br>"
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam1000_wired_cap.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 6
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 3
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": 3,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_1038_step_3_01",
+                "text": "Connect the other end of the AC power adapter to a power outlet within 3 feet of your Vera controller. The green Power LED will be solid for 15 seconds and then it will start blinking. <br><br>\n<b>Note:</b><br>\nPlease ensure the Camera is successfully paired to your controller before permanent mounting. Go to <a href='http://support.getvera.com' target='_blank'>http://support.getvera.com</a> to review permanent mounting instructions. The AC Power Adapter is for indoor use ONLY. It is not weatherized for outdoor placement."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam1000_wired_power.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 4,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_1038_step_4_01",
+                "text": "In 1 minute the green Power LED on the back of the camera will be solid and the Network LED will begin blinking green."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "vistacam1000_wired_leds.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 5
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 5,
+        "template": 7,
+        "text_content": [
+
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_manual_camera",
+              "text": "Manually install the camera (advanced)"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "camera_manual_install",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "step_count": 6,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_found_camera",
+                "text": "The camera was added.  Watch the live video as well as recorded video clips under the Cameras section.  By default whenever there is an alert in the house, like tripping a motion, door, smoke or flood sensor, the camera will automatically archive 15 - 20 seconds of video(depending on camera model).  You can change this by editing the Preset Modes on the dashboard."
+              }
+            ]
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

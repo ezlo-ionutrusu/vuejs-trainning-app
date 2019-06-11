@@ -1,0 +1,464 @@
+{
+  "category_id": "70",
+  "wizard": {
+    "name": "Swiss Appliance Module - CentraLite Centralite Appliance Module (4256251-RZHAC)",
+    "countable_steps": 3,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "step_headline": {
+          "lang_tag": "ui7_devwiz2_headline_kd4242",
+          "text": "CentraLite Appliance Module (4256251-RZHAC)"
+        },
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_type": "manual",
+            "target": "",
+            "group_text": {
+              "lang_tag": "",
+              "text": ""
+            }
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "static_group": 3,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz2_intro2_kd3001",
+                "text": "Plug your Lamp Module into a AC Outlet."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 2,
+            "group_image": "1024px-Centralite-Lamp-4256251-01.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz2_pair_kd3001",
+                "text": "Press and hold the button down to begin the pairing process."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz2_pair2_generic",
+                "text": "If the device isn't detected in the next 60 seconds, click the 'Retry' button below and begin the un-pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "1024px-Centralite-Lamp-4256251-02.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_reset",
+              "text": "Retry"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ]
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 5
+            }
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 4,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_install_device_name_room_step",
+                "text": "Add a name for the device and assign it to a room."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "template": 1,
+        "reset_step": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_zigbee_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin to reset this device."
+              },
+              {
+                "lang_tag": "ui7_devwiz2_reset_kd3001",
+                "text": "To reset the device:\n1. Disconnet the Lamp Module from the AC Outlet.\n2. Press and hold the Lamp Module button while plugging it into the AC Outlet. After 2 seconds LED light will turn green. Let go of button."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "1024px-Centralite-Lamp-4256251-02.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_add_again",
+              "text": "Try adding it again"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_devwiz2_reset_kd3001",
+                "text": "To reset the device:\n1. Disconnet the Lamp Module from the AC Outlet.\n2. Press and hold the Lamp Module button while plugging it into the AC Outlet. After 2 seconds LED light will turn green. Let go of button."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "1024px-Centralite-Lamp-4256251-02.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_cpanel_delete_device",
+              "text": "Delete Device"
+            },
+            "button_command": [
+              {
+                "command_type": "delete_zigbee_navigate",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

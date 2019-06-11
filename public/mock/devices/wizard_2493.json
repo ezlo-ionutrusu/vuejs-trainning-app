@@ -1,0 +1,490 @@
+{
+  "category_id": "90",
+  "wizard": {
+    "name": "Touchscreen Lever Lock - Yale YRL220ZW605",
+    "countable_steps": 3,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "step_headline": {
+          "lang_tag": "kitdevice_2493",
+          "text": "Touchscreen Lever Lock"
+        },
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_type": "manual",
+            "target": "",
+            "group_text": {
+              "lang_tag": "",
+              "text": ""
+            }
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz2_intro_kd2493",
+                "text": "Follow supplied instructions in the Installation Manual before pairing Touchscreen Lever Lock."
+              },
+              {
+                "lang_tag": "ui7_devwiz2_intro2_kd2493",
+                "text": "Touch the keypad screen with the palm of your hand to block the keypad from the light for a moment. This will 'wake up' the keypad. To set the Master PIN follow the steps: </br> - press the '1' key; </br> - press the # (pound) key; </br> - enter new 4-8 digit Master PIN code followed by the # (pound) key. </br>  Lock visually confirms PIN code selection, announces 'Registered' ."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 2,
+            "group_image": "1024px-Yale-YAL-YRL220ZW605-05.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz2_pair_kd2493",
+                "text": "To begin the pairing process, cover the keypad with the palm of your hand.<br>- Enter the MASTER PIN you created<br>- Press the # (pound) key<br>- Press the 7 key<br>- Press the # (pound) key again<br>- Press the 1 key again<br>- Press the # (pound) key one last time"
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz2_pair2_generic",
+                "text": "If the device isn't detected in the next 60 seconds, click the 'Retry' button below and begin the un-pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 5
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_reset",
+              "text": "Retry"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 4,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_install_device_name_room_step",
+                "text": "Add a name for the device and assign it to a room."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          },
+          {
+            "command_type": "event",
+            "event_remove": "device_removed"
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "template": 1,
+        "reset_step": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_devwiz2_reset_kd2493",
+                "text": "To exclude your device, please follow these steps:<br/><br/> Enter the MASTER PIN you created <br/>Press the '#' (pound) key <br/> Press the '7' key <br/> Press the '#' (pound) key again<br/> Press the '3' key <br/> Press the '#' (pound) key one last time<br/><br/>  This will start the un-pairing process."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "1024px-Yale-YAL-YRL220ZW605-05.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "exclude_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_removed",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 1
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_add_again",
+              "text": "Try adding it again"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_devwiz2_reset_kd2493",
+                "text": "To exclude your device, please follow these steps:<br/><br/> Enter the MASTER PIN you created <br/>Press the '#' (pound) key <br/> Press the '7' key <br/> Press the '#' (pound) key again<br/> Press the '3' key <br/> Press the '#' (pound) key one last time<br/><br/>  This will start the un-pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "1024px-Yale-YAL-YRL220ZW605-05.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "exclude_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_removed",
+            "action": {
+              "type": "action_exit_wizard",
+              "argument": 3
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

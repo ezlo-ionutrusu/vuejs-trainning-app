@@ -1,0 +1,490 @@
+{
+  "category_id": "100",
+  "wizard": {
+    "name": "Motion Detector - zooZ ZSE40",
+    "countable_steps": 3,
+    "delete_step": 100,
+    "steps": [
+      {
+        "id": 1,
+        "step_count": 1,
+        "template": 1,
+        "step_headline": {
+          "lang_tag": "ui7_kitdevice_7091_headline",
+          "text": "zooZ 4-in-1 sensor"
+        },
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_type": "manual",
+            "target": "",
+            "group_text": {
+              "lang_tag": "",
+              "text": ""
+            }
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_1_11",
+                "text": "Remove the battery cover by pressing down on the top tab. Insert the provided CR123A battery into the battery slot as shown below. Put the battery cover back on your sensor.<br>\nPress the 'Next' button below to begin the pairing process."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 2,
+            "group_image": "zooz_zse40_screen1.jpg"
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": "4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": ""
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "step_count": "",
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_next",
+              "text": "Next"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 4
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "step_count": 2,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_4_01",
+                "text": "Using a paperclip, press the Z-Wave Button twice on your sensor to pair it."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_4_11",
+                "text": "If the sensor isn't detected in the next 60 seconds, click the 'Retry' button below and begin the un-pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "zooz_zse40_screen3.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "include_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_added",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 5
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_reset",
+              "text": "Retry"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "step_count": 4,
+        "template": 3,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_install_device_name_room_step",
+                "text": "Add a name for the device and assign it to a room."
+              },
+              {
+                "lang_tag": "",
+                "text": ""
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": ""
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          },
+          {
+            "command_type": "event",
+            "event_remove": "device_removed"
+          }
+        ],
+        "widgets": [
+          "device_type_found"
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_finish",
+              "text": "Finish"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "template": 1,
+        "reset_step": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_6_01",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_6_02",
+                "text": "Using a paperclip, press the Z-Wave Button twice on your sensor. The Front LED will blink blue 5 times, indicating un-pairing is successful."
+              }
+            ]
+          },
+          {
+            "static_group": 2,
+            "group_text": [
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_6_11",
+                "text": "Click the 'Try Adding It Again' button to begin the pairing process."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "zooz_zse40_screen5.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "exclude_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_remove": "device_added"
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_removed",
+            "action": {
+              "type": "action_go_to_step",
+              "argument": 1
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          },
+          {
+            "button_id": 2,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_add_again",
+              "text": "Try adding it again"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 1
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "template": 1,
+        "text_content": [
+          {
+            "static_group": 1,
+            "group_text": [
+              {
+                "lang_tag": "ui7_devwiz_reset_intro",
+                "text": "The Vera Controller will now begin the un-pairing process."
+              },
+              {
+                "lang_tag": "ui7_kitdevice_7091_step_6_02",
+                "text": "Using a paperclip, press the Z-Wave Button twice on your sensor. The Front LED will blink blue 5 times, indicating un-pairing is successful."
+              }
+            ]
+          }
+        ],
+        "images": [
+          {
+            "static_group": 1,
+            "group_image": "zooz_zse40_screen5.jpg"
+          }
+        ],
+        "auto_command": [
+          {
+            "command_type": "gateway",
+            "action": {
+              "type": "exclude_mode"
+            }
+          },
+          {
+            "command_type": "event",
+            "event_add": "device_removed",
+            "action": {
+              "type": "action_exit_wizard",
+              "argument": 3
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "button_id": 1,
+            "label": {
+              "lang_tag": "ui7_devwiz_btn_exit",
+              "text": "Exit"
+            },
+            "button_command": [
+              {
+                "command_type": "navigation",
+                "action": {
+                  "type": "action_exit_wizard",
+                  "argument": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

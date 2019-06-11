@@ -18,5 +18,10 @@ export default new Router({
       name: 'devices',
       component: () => import('@/devices/containers/Page/index'),
     },
+    {
+      path: '/devices/:id',
+      name: 'category-models',
+      component: () => import('@/devices/containers/CategoryModels/index'),
+    },
   ],
 });

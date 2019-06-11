@@ -1,0 +1,525 @@
+{
+  "category_id": "80",
+  "wizards": [
+    {
+      "subtitle": {
+        "lang_tag": "ui7_vc_700_p3",
+        "text": "For Wired Setup"
+      },
+      "text": {
+        "lang_tag": "ui7_dev_wiz_wired_camera_setup_general",
+        "text": "These are the steps for pairing the camera with all controllers."
+      },
+      "button": {
+        "lang_tag": "ui7_vc_700_b2",
+        "text": "Begin Wired Setup"
+      },
+      "wizard": {
+        "name": "VistaCam 1100 -  <-Model->",
+        "countable_steps": 5,
+        "delete_step": 100,
+        "steps": [
+          {
+            "id": 1,
+            "step_count": 1,
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_vcam1100_wired_p1",
+                    "text": "Mount the VistaCam 1100 on its stand.<br/><br/>Put one end of the Ethernet cable through the Plastic Cap.<br/><br/>Put the Rubber Plug over Ethernet Cable to ensure connection is waterproof.<br/><br/>Screw on the Plastic Cap to the back of the Camera."
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": "1024px-VistaCam1100-Wired-01.jpg"
+              }
+            ],
+            "auto_command": [
+              {
+                "command_type": "event",
+                "event_add": "device_added",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": "3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "step_count": "",
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "",
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": ""
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": "3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "step_count": 2,
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_vcam1100_wired_p2",
+                    "text": "Firmly connect the Ethernet cable to the provided Y-cable connector. The correct connector will be labeled as \"Camera\".<br/><br/>Firmly connect the end of the yellow Y-cable connector to the wireless PoE WPS Adapter.<br/><br/>Firmly connect the end of the white Y-cable connector to your router (or other internet source)."
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": "1024px-VistaCam1100-Wired-02.jpg"
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": 4
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "step_count": 3,
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_vcam1100_wired_p3",
+                    "text": "Then Plug PoE Adapter into an AC outlet."
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": "1024px-VistaCam1100-Wired-03.jpg"
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": 5
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "step_count": 4,
+            "template": 7,
+            "text_content": [
+
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_manual_camera",
+                  "text": "Manually install the camera (advanced)"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "camera_manual_install",
+                      "argument": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "step_count": 6,
+            "template": 3,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_devwiz_found_camera",
+                    "text": "The camera was added.  Watch the live video as well as recorded video clips under the Cameras section.  By default whenever there is an alert in the house, like tripping a motion, door, smoke or flood sensor, the camera will automatically archive 15 - 20 seconds of video(depending on camera model).  You can change this by editing the Preset Modes on the dashboard."
+                  }
+                ]
+              }
+            ],
+            "widgets": [
+              "device_type_found"
+            ],
+            "auto_command": [
+              {
+                "command_type": "event",
+                "event_remove": "device_added"
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_finish",
+                  "text": "Finish"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_exit_wizard",
+                      "argument": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "subtitle": {
+        "lang_tag": "ui7_vc_700_p1",
+        "text": "For Wireless Setup"
+      },
+      "text": {
+        "lang_tag": "ui7_dev_wiz_wireless_camera_setup_general",
+        "text": "These are the steps for pairing the camera using controllers that support WPS(Wi-Fi Protected Setup)."
+      },
+      "button": {
+        "lang_tag": "ui7_vc_700_b1",
+        "text": "Begin Wireless Setup"
+      },
+      "wizard": {
+        "name": "VistaCam 1100 -  <-Model->",
+        "countable_steps": 5,
+        "delete_step": 100,
+        "steps": [
+          {
+            "id": 1,
+            "step_count": 1,
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_kd1027_ethernet",
+                    "text": "Mount the VistaCam 1100 on its stand.<br/><br/>Put one end of the Ethernet cable through the Plastic Cap.<br/><br/>Put the Rubber Plug over Ethernet Cable to ensure connection is waterproof.<br/><br/>Screw on Plastic Cap to back of Camera."
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": "1024px-VistaCam1100-01_1.jpg"
+              }
+            ],
+            "auto_command": [
+              {
+                "command_type": "event",
+                "event_add": "device_added",
+                "action": {
+                  "type": "action_go_to_step",
+                  "argument": 6
+                }
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": "3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "step_count": "",
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "",
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": ""
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": "3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "step_count": 2,
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_kd1027_power",
+                    "text": "Connect other end of Ethernet Cable to PoE WPS Adapter. Our unique single cable installation combines power and data, through technology called Power over Ethernet (PoE).<br/><br/>Then Plug PoE Adapter into a AC outlet within 3 feet of your Vera controller.<br/><br/>Note:<br/>1. Please ensure Camera is paired to your network before permanent mounting. Go to [http://support.getvera.com] to review permanent mounting instructions.<br/><br/>2. The PoE Adapter is for indoor use ONLY. It is not weatherized for outdoor placement."
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": "1024px-VistaCam1100-03.jpg"
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": 4
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "step_count": 3,
+            "template": 1,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_kd1027_pair",
+                    "text": "Press the WPS button on the Wireless PoE Adapter and hold for no more than 2 seconds. The bottom LED will turn YELLOW (A).<br/><br/>Depending on which Vera Controller you have:<br/><br/>On the VeraEdge press the WPS button for at least 5 seconds.<br/><br/>On the VeraPlus & VeraSecure follow these steps:<br/>1. Press on the Select button. Unit will enter in selection mode.<br/>2. Keep pressing the Select button until the Wi-Fi LED blinks. (While in WPS mode, Wi-Fi LED will blink very fast.)<br/>3. Press on the Sync button to confirm selection and execute WPS mode.<br/>Note: The unit stays in WPS mode for 2 minutes.<br/><br/>The bottom LED on the PoE Adapter will turn GREEN (B) within 30 seconds when the pairing is successful."
+                  }
+                ]
+              }
+            ],
+            "images": [
+              {
+                "static_group": 1,
+                "group_image": "1024px-VistaCam1100-04.jpg"
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_next",
+                  "text": "Next"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_go_to_step",
+                      "argument": 5
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "step_count": 4,
+            "template": 7,
+            "text_content": [
+
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_manual_camera",
+                  "text": "Manually install the camera (advanced)"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "camera_manual_install",
+                      "argument": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "step_count": 6,
+            "template": 3,
+            "text_content": [
+              {
+                "static_group": 1,
+                "group_text": [
+                  {
+                    "lang_tag": "ui7_devwiz_found_camera",
+                    "text": "The camera was added.  Watch the live video as well as recorded video clips under the Cameras section.  By default whenever there is an alert in the house, like tripping a motion, door, smoke or flood sensor, the camera will automatically archive 15 - 20 seconds of video(depending on camera model).  You can change this by editing the Preset Modes on the dashboard."
+                  }
+                ]
+              }
+            ],
+            "widgets": [
+              "device_type_found"
+            ],
+            "auto_command": [
+              {
+                "command_type": "event",
+                "event_remove": "device_added"
+              }
+            ],
+            "buttons": [
+              {
+                "button_id": 1,
+                "label": {
+                  "lang_tag": "ui7_devwiz_btn_finish",
+                  "text": "Finish"
+                },
+                "button_command": [
+                  {
+                    "command_type": "navigation",
+                    "action": {
+                      "type": "action_exit_wizard",
+                      "argument": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

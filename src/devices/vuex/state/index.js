@@ -1,2 +1,5 @@
-const state = {};
+const state = {
+  wizzardData: [],
+  wizzardCategoryModels: [],
+};
 export default { state };
