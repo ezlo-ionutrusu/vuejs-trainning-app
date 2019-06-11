@@ -1,8 +1,9 @@
 <template>
-  <section class="mt-20" v-if="fetchCategoryModels">
+  <section v-if="fetchCategoryModels">
     <h1 class="title">
       <i class="fa fa-charging-station"></i>&nbsp;Fetch models by category from VUEX
     </h1>
+    <hr>
     <button class="button is-default" @click="goBack()">
       <i class="fa fa-arrow-left"></i>&nbsp;Go back
     </button>
@@ -18,6 +19,8 @@
         default-sort="Name.text"
         aria-next-label="Next page"
         aria-previous-label="Previous page"
+        :selected.sync="selected"
+        focusable
         aria-page-label="Page"
         aria-current-label="Current page"
       >
@@ -42,8 +45,30 @@ export default {
       isPaginationSimple: false,
       defaultSortDirection: "asc",
       currentPage: 1,
-      perPage: 5
+      perPage: 5,
+      selected: null
     };
+  },
+  watch: {
+    selected(selectedModel) {
+      if (selectedModel) {
+        const { PK_KitDevice } = selectedModel;
+        const modelURL = `${
+          process.env.BASE_URL
+        }mock/devices/wizard_${PK_KitDevice}.json`;
+        this.fetchMockData(modelURL).then(response => {
+          if (response.data) {
+            const {
+              wizard: { name }
+            } = response.data;
+            this.$dialog.alert({
+              title: `${name}`,
+              message: JSON.stringify(response.data, null, 2)
+            });
+          }
+        });
+      }
+    }
   },
   computed: {
     ...mapGetters(["devices/getWizzardCategoryModels"]),
@@ -55,6 +80,19 @@ export default {
     }
   },
   methods: {
+    fetchMockData(urlToMock) {
+      return new Promise((resolve, reject) => {
+        var config = {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/x-www-form-urlencoded"
+          }
+        };
+        this.axios.get(urlToMock, config).then(function(response) {
+          resolve(response);
+        });
+      });
+    },
     goBack() {
       this.$router.go(-1);
     }
@@ -75,5 +113,8 @@ export default {
 <style>
 table {
   width: 100%;
+}
+.pagination {
+  margin-top: 20px;
 }
 </style>
