@@ -98,9 +98,11 @@ export default {
     }
   },
   mounted() {
+    NProgress.start();
     this.fetchMockData(`${process.env.BASE_URL}mock/KitDevice.json`).then(
       response => {
         if (response) {
+          NProgress.done();
           this.wizzardData = response.data;
           //init store
           this.$store.dispatch("devices/setWizzardData", this.wizzardData);

@@ -25,6 +25,7 @@ export default {
   },
   methods: {
     loadImageProcess(imageUrl) {
+      NProgress.start();
       return new Promise((resolve, reject) => {
         var config = {
           headers: {
@@ -45,6 +46,7 @@ export default {
       this.loadImageProcess("/img/icons/android-chrome-192x192.png").then(
         response => {
           this.isImageLoaded = true;
+          NProgress.done();
           this.imageData = response;
         }
       );

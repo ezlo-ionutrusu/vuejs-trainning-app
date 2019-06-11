@@ -58,6 +58,7 @@ export default {
         }mock/devices/wizard_${PK_KitDevice}.json`;
         this.fetchMockData(modelURL).then(response => {
           if (response.data) {
+            NProgress.done();
             const {
               wizard: { name }
             } = response.data;
@@ -81,6 +82,7 @@ export default {
   },
   methods: {
     fetchMockData(urlToMock) {
+      NProgress.start();
       return new Promise((resolve, reject) => {
         var config = {
           headers: {
