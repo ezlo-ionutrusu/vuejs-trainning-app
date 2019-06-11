@@ -59,6 +59,16 @@ export default {
         this.fetchMockData(modelURL).then(response => {
           if (response.data) {
             NProgress.done();
+
+            const { wizards } = response.data;
+            if (wizards) {
+              this.$dialog.alert({
+                title: `Wizards`,
+                message: JSON.stringify(response.data, null, 2)
+              });
+              return;
+            }
+
             const {
               wizard: { name }
             } = response.data;
