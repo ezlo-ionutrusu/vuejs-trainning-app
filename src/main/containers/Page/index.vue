@@ -22,17 +22,17 @@
 export default {
   data() {
     return {
-      defaultFirstLastName: "John Doe"
+      defaultFirstLastName: 'John Doe',
     };
   },
   components: {
-    "form-component": () => import("@/main/components/Form/index"),
-    "button-component": () => import("@/main/components/Button/index"),
-    "image-component": () => import("@/main/components/Image/index"),
-    "style-component": () => import("@/main/components/Style/index"),
-    "list-component": () => import("@/main/components/List/index"),
-    "slot-component": () => import("@/main/components/Slots/index"),
-    "computed-component": () => import("@/main/components/Computed/index")
-  }
+    'form-component': () => import('@/main/components/Form/index'),
+    'button-component': () => import('@/main/components/Button/index'),
+    'image-component': () => import('@/main/components/Image/index'),
+    'style-component': () => import('@/main/components/Style/index'),
+    'list-component': () => import('@/main/components/List/index'),
+    'slot-component': () => import('@/main/components/Slots/index'),
+    'computed-component': () => import('@/main/components/Computed/index'),
+  },
 };
 </script>

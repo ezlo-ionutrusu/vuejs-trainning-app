@@ -16,17 +16,17 @@ export default {
   props: {
     defaultFirstLastName: {
       type: [String, Number],
-      required: false
-    }
+      required: false,
+    },
   },
   methods: {
     handlerButton() {
       this.$dialog.alert({
         title: `Hello ${this.defaultFirstLastName}`,
-        message: "Buefy modal and reading of props from input",
-        confirmText: "Ok!"
+        message: 'Buefy modal and reading of props from input',
+        confirmText: 'Ok!',
       });
-    }
-  }
+    },
+  },
 };
 </script>

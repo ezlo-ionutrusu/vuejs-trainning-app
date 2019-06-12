@@ -14,24 +14,24 @@ export default {
   props: {
     defaultFirstLastName: {
       type: [String, Number],
-      required: false
-    }
+      required: false,
+    },
   },
   data() {
     return {
-      firsLastName: null
+      firsLastName: null,
     };
   },
   watch: {
     firsLastName(newV) {
-      this.$emit("input", newV);
-    }
+      this.$emit('input', newV);
+    },
   },
   mounted() {
     const { defaultFirstLastName } = this;
     if (defaultFirstLastName && defaultFirstLastName.trim().length > 0) {
       this.firsLastName = defaultFirstLastName;
     }
-  }
+  },
 };
 </script>

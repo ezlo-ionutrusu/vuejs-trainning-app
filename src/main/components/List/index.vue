@@ -7,11 +7,12 @@
   </section>
 </template>
 <script>
-import KitDevice from "@/mock/KitDevice.json";
+import KitDevice from '@/mock/KitDevice.json';
+
 export default {
   data() {
     return {
-      wizzardCategory: []
+      wizzardCategory: [],
     };
   },
   mounted() {
@@ -19,6 +20,6 @@ export default {
       const { DeviceWizardCategory } = KitDevice;
       this.wizzardCategory = DeviceWizardCategory;
     }
-  }
+  },
 };
 </script>

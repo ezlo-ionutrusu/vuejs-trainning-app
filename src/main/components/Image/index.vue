@@ -13,44 +13,44 @@
 </template>
 
 <script>
-import { URL } from "url";
+import nProgress from '@/utils/index';
 
 export default {
   data() {
     return {
       isImageLoaded: false,
       imageData: null,
-      pending: false
+      pending: false,
     };
   },
   methods: {
     loadImageProcess(imageUrl) {
-      NProgress.start();
-      return new Promise((resolve, reject) => {
-        var config = {
+      nProgress.start();
+      return new Promise((resolve) => {
+        const config = {
           headers: {
-            "Access-Control-Allow-Origin": "*"
+            'Access-Control-Allow-Origin': '*',
           },
-          responseType: "blob"
+          responseType: 'blob',
         };
-        this.axios.get(imageUrl, config).then(function(response) {
-          var reader = new window.FileReader();
+        this.axios.get(imageUrl, config).then((response) => {
+          const reader = new window.FileReader();
           reader.readAsDataURL(response.data);
-          reader.onload = function() {
+          reader.onload = () => {
             resolve(reader.result);
           };
         });
       });
     },
     loadImage() {
-      this.loadImageProcess("/img/icons/android-chrome-192x192.png").then(
-        response => {
+      this.loadImageProcess('/img/icons/android-chrome-192x192.png').then(
+        (response) => {
           this.isImageLoaded = true;
-          NProgress.done();
+          nProgress.done();
           this.imageData = response;
-        }
+        },
       );
-    }
-  }
+    },
+  },
 };
 </script>

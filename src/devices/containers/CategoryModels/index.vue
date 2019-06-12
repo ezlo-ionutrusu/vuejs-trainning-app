@@ -36,89 +36,91 @@
   </section>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
+import nProgress from '@/utils/index';
+
 export default {
   data() {
     return {
       data: null,
       isPaginated: true,
       isPaginationSimple: false,
-      defaultSortDirection: "asc",
+      defaultSortDirection: 'asc',
       currentPage: 1,
       perPage: 5,
-      selected: null
+      selected: null,
     };
   },
   watch: {
     selected(selectedModel) {
       if (selectedModel) {
-        const { PK_KitDevice } = selectedModel;
+        const idKitDevice = selectedModel.PK_KitDevice;
         const modelURL = `${
           process.env.BASE_URL
-        }mock/devices/wizard_${PK_KitDevice}.json`;
-        this.fetchMockData(modelURL).then(response => {
+        }mock/devices/wizard_${idKitDevice}.json`;
+        this.fetchMockData(modelURL).then((response) => {
           if (response.data) {
-            NProgress.done();
+            nProgress.done();
 
             const { wizards } = response.data;
             if (wizards) {
               this.$dialog.alert({
-                title: `Wizards`,
-                message: JSON.stringify(response.data, null, 2)
+                title: 'Wizards',
+                message: JSON.stringify(response.data, null, 2),
               });
               return;
             }
 
             const {
-              wizard: { name }
+              wizard: { name },
             } = response.data;
             this.$dialog.alert({
               title: `${name}`,
-              message: JSON.stringify(response.data, null, 2)
+              message: JSON.stringify(response.data, null, 2),
             });
           }
         });
       }
-    }
+    },
   },
   computed: {
-    ...mapGetters(["devices/getWizzardCategoryModels"]),
+    ...mapGetters(['devices/getWizzardCategoryModels']),
     fetchCategoryModels() {
-      if (this["devices/getWizzardCategoryModels"]) {
+      if (this['devices/getWizzardCategoryModels']) {
         return true;
       }
       return false;
-    }
+    },
   },
   methods: {
     fetchMockData(urlToMock) {
-      NProgress.start();
-      return new Promise((resolve, reject) => {
-        var config = {
+      nProgress.start();
+      return new Promise((resolve) => {
+        const config = {
           headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/x-www-form-urlencoded"
-          }
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
         };
-        this.axios.get(urlToMock, config).then(function(response) {
+        this.axios.get(urlToMock, config).then((response) => {
           resolve(response);
         });
       });
     },
     goBack() {
       this.$router.go(-1);
-    }
+    },
   },
   mounted() {
     if (
-      this["devices/getWizzardCategoryModels"] &&
-      this["devices/getWizzardCategoryModels"].length > 0
+      this['devices/getWizzardCategoryModels']
+      && this['devices/getWizzardCategoryModels'].length > 0
     ) {
-      this.data = this["devices/getWizzardCategoryModels"];
+      this.data = this['devices/getWizzardCategoryModels'];
     } else {
       this.goBack();
     }
-  }
+  },
 };
 </script>
 

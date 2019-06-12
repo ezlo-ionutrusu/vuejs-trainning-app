@@ -12,25 +12,28 @@
 </template>
 
 <script>
-import filters from "@/main/filters/filters";
+import filters from '@/main/filters/filters';
+
 export default {
+  filters,
   data() {
     return {
-      customeClass: "",
-      customeStyle: "",
-      customeText: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
+      customeClass: '',
+      customeStyle: '',
+      customeText:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
     };
   },
   methods: {
     addCustomClass() {
-      this.customeClass = "has-text-red";
+      this.customeClass = 'has-text-red';
     },
     addCustomStyle() {
       this.customeStyle = {
-        fontStyle: "italic"
+        fontStyle: 'italic',
       };
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>

@@ -15,24 +15,21 @@ export default {
   data() {
     return {
       languages: [
-        "JavaScript",
-        "Ruby",
-        "Scala",
-        "Python",
-        "Java",
-        "Kotlin",
-        "Elixir"
+        'JavaScript',
+        'Ruby',
+        'Scala',
+        'Python',
+        'Java',
+        'Kotlin',
+        'Elixir',
       ],
-      input: ""
+      input: '',
     };
   },
   computed: {
     filteredList() {
-      return this.languages.filter(item =>
-        item.toLowerCase().includes(this.input.toLowerCase())
-      );
-    }
-  }
+      return this.languages.filter(item => item.toLowerCase().includes(this.input.toLowerCase()));
+    },
+  },
 };
 </script>
-

@@ -20,20 +20,24 @@
   </section>
 </template>
 <script>
-import filters from "@/devices/filters/filters";
-import { mapGetters } from "vuex";
+import filters from '@/devices/filters/filters';
+import { mapGetters } from 'vuex';
+import nProgress from '@/utils/index';
+
 export default {
+  filters,
   computed: {
     ...mapGetters([
-      "devices/getWizzardData",
-      "devices/getWizzardCategoryModels"
+      'devices/getWizzardData',
+      'devices/getWizzardCategoryModels',
     ]),
     fetchWizzardCategories() {
-      const wizzardData = this["devices/getWizzardData"];
+      const wizzardData = this['devices/getWizzardData'];
       if (wizzardData) {
         const { DeviceWizardCategory } = wizzardData;
         return DeviceWizardCategory;
       }
+      return null;
     },
     checkWizzardData() {
       const { wizzardData } = this;
@@ -41,16 +45,16 @@ export default {
         return true;
       }
       return false;
-    }
+    },
   },
   data() {
     return {
-      wizzardData: []
+      wizzardData: [],
     };
   },
   methods: {
     fetchNumberOfModelsByCategory(catID) {
-      const wizzardData = this["devices/getWizzardData"];
+      const wizzardData = this['devices/getWizzardData'];
       if (wizzardData) {
         const { KitDevice } = wizzardData;
         return ` ${
@@ -58,57 +62,58 @@ export default {
             .length
         } models`;
       }
+      return '';
     },
     showModelsForCategory(catID) {
-      const wizzardData = this["devices/getWizzardData"];
+      const wizzardData = this['devices/getWizzardData'];
       if (wizzardData) {
         const { KitDevice } = wizzardData;
         const filteredResults = KitDevice.filter(
-          item => item.PK_DeviceWizardCategory === catID
+          item => item.PK_DeviceWizardCategory === catID,
         );
         if (filteredResults) {
           this.$store.dispatch(
-            "devices/setWizzardCategoryMoidels",
-            filteredResults
+            'devices/setWizzardCategoryMoidels',
+            filteredResults,
           );
           this.$router.push({
-            name: "category-models",
-            params: { id: catID }
+            name: 'category-models',
+            params: { id: catID },
           });
         } else {
           this.$dialog.alert({
-            title: `Warning`,
-            message: `No models found with category id: ${catID}`
+            title: 'Warning',
+            message: `No models found with category id: ${catID}`,
           });
         }
       }
     },
     fetchMockData(urlToMock) {
-      return new Promise((resolve, reject) => {
-        var config = {
+      return new Promise((resolve) => {
+        const config = {
           headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Content-Type": "application/x-www-form-urlencoded"
-          }
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
         };
-        this.axios.get(urlToMock, config).then(function(response) {
+        this.axios.get(urlToMock, config).then((response) => {
           resolve(response);
         });
       });
-    }
+    },
   },
   mounted() {
-    NProgress.start();
+    nProgress.start();
     this.fetchMockData(`${process.env.BASE_URL}mock/KitDevice.json`).then(
-      response => {
+      (response) => {
         if (response) {
-          NProgress.done();
+          nProgress.done();
           this.wizzardData = response.data;
-          //init store
-          this.$store.dispatch("devices/setWizzardData", this.wizzardData);
+          // init store
+          this.$store.dispatch('devices/setWizzardData', this.wizzardData);
         }
-      }
+      },
     );
-  }
+  },
 };
 </script>
