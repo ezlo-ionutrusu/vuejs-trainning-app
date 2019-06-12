@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="mt-50">
     <form>
       <h1 class="subtitle has-text-weight-bold">Input v-model, props example</h1>
       <b-field label="Name" :message="firsLastName">

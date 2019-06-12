@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-50">
     <h1 class="subtitle has-text-weight-bold">Button click example+ components bi-communication</h1>
     <b-button
       icon-pack="fa"

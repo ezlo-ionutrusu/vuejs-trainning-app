@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-50">
     <h1 class="subtitle">Image loading via axios+ v-if</h1>
     <div class="columns">
       <div class="column is-2">

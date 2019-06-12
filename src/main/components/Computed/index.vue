@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-50">
     <h1 class="subtitle has-text-weight-bold">Computed methods</h1>
     <b-field label="Name">
       <b-input type="text" v-model="input"></b-input>
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     filteredList() {
-      return this.languages.filter(item => item.toLowerCase().includes(this.input.toLowerCase()));
+      return this.languages.filter(item => item.toLowerCase().includes(this.input.toLowerCase()),);
     },
   },
 };

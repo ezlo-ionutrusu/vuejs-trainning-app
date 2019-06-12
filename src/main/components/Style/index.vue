@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-50">
     <h1 class="subtitle has-text-weight-bold">Custom style and class + filters</h1>
     <h1
       :class="['subtitle',customeClass]"

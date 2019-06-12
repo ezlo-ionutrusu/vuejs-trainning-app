@@ -4,6 +4,7 @@
       <i class="fa fa-home"></i>&nbsp;Home
     </h1>
     <hr>
+    <form-validate-component/>
     <form-component :defaultFirstLastName="defaultFirstLastName" v-model="defaultFirstLastName"/>
     <button-component :defaultFirstLastName="defaultFirstLastName"/>
     <image-component/>
@@ -33,6 +34,7 @@ export default {
     'list-component': () => import('@/main/components/List/index'),
     'slot-component': () => import('@/main/components/Slots/index'),
     'computed-component': () => import('@/main/components/Computed/index'),
+    'form-validate-component': () => import('@/main/components/Form-Validate/index'),
   },
 };
 </script>

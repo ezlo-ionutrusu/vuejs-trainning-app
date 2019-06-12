@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20">
+  <section class="mt-50">
     <h1 class="subtitle has-text-weight-bold">List with dynamic import</h1>
     <ul v-if="wizzardCategory && wizzardCategory.length>0">
       <li v-for="(item,index) in wizzardCategory" :key="index">{{item.LS_DeviceWizardCategory}}</li>
