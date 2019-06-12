@@ -4,8 +4,11 @@
     <h1
       :class="['subtitle',customeClass]"
       :style="this.customeStyle"
-    >{{customeText | truncate(50, '...')}}</h1>
-    <h1 :class="['subtitle',customeClass]" :style="this.customeStyle">{{customeText | uppercase}}</h1>
+    >{{customeText | truncateText(50, '...')}}</h1>
+    <h1
+      :class="['subtitle',customeClass]"
+      :style="this.customeStyle"
+    >{{customeText | textToUpperCase}}</h1>
     <button class="button" @click="addCustomStyle()">Add custome style</button>
     <button class="button ml-10" @click="addCustomClass()">Add custome class</button>
   </section>

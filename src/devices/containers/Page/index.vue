@@ -12,7 +12,7 @@
           href="javascript:void(0)"
           @click="showModelsForCategory(item['PK_DeviceWizardCategory'])"
         >
-          <span>{{`${index}.`}} {{item['LS_DeviceWizardCategory'] | no_underscore}}</span>
+          <span>{{`${index}.`}} {{item['LS_DeviceWizardCategory'] | noUnderScore}}</span>
           <span>{{fetchNumberOfModelsByCategory(item['PK_DeviceWizardCategory'])}}</span>
         </a>
       </div>

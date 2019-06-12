@@ -7,7 +7,7 @@
   </section>
 </template>
 <script>
-import KitDevice from '@/mock/KitDevice.json';
+import nProgress from '@/utils/index';
 
 export default {
   data() {
@@ -16,10 +16,31 @@ export default {
     };
   },
   mounted() {
-    if (KitDevice) {
-      const { DeviceWizardCategory } = KitDevice;
-      this.wizzardCategory = DeviceWizardCategory;
-    }
+    nProgress.start();
+    this.fetchMockData(`${process.env.BASE_URL}mock/KitDevice.json`).then(
+      (response) => {
+        if (response) {
+          nProgress.done();
+          const { DeviceWizardCategory } = response.data;
+          this.wizzardCategory = DeviceWizardCategory;
+        }
+      },
+    );
+  },
+  methods: {
+    fetchMockData(urlToMock) {
+      return new Promise((resolve) => {
+        const config = {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+        };
+        this.axios.get(urlToMock, config).then((response) => {
+          resolve(response);
+        });
+      });
+    },
   },
 };
 </script>
