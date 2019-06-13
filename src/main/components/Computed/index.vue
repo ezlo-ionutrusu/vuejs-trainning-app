@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     filteredList() {
-      return this.languages.filter(item => item.toLowerCase().includes(this.input.toLowerCase()),);
+      return this.languages.filter(item => item.toLowerCase().includes(this.input.toLowerCase()));
     },
   },
 };

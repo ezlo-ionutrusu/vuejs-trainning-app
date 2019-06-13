@@ -11,7 +11,7 @@ const store = new Vuex.Store({
     main,
     devices,
   },
-  strict: true,
+  strict: process.env.NODE_ENV !== 'production',
 });
 global.store = store;
 export default store;
