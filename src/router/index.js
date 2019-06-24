@@ -23,5 +23,15 @@ export default new Router({
       name: 'category-models',
       component: () => import('@/devices/containers/CategoryModels/index'),
     },
+    {
+      path: '/users',
+      name: 'users',
+      component: () => import('@/users/containers/Page/index'),
+    },
+    {
+      path: '/users/add',
+      name: 'users-add',
+      component: () => import('@/users/containers/AddUser/index'),
+    },
   ],
 });

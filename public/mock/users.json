@@ -1,0 +1,76 @@
+{
+  "Users": [
+    {
+      "PK_User": 200954,
+      "PK_Account": 11214014,
+      "PK_PermissionRole": 10,
+      "Username": "con.fcms",
+      "Name": "Fara CMS",
+      "Email": "con.fcms@yopmail.com",
+      "Validated": 1,
+      "EmailAlerts": 0,
+      "EmailNews": 0,
+      "EmailNotifications": 1,
+      "PhoneNotifications": 0,
+      "PushNotifications": 1,
+      "PK_Oem_User": "",
+      "Created": "2019-06-11 13:35:04",
+      "Blocked": 0,
+      "FirstName": "Constellation",
+      "PK_Language": 1,
+      "Phone": {
+        "PK_Provider": 0,
+        "PK_Country": 840,
+        "Phone": "",
+        "ValidationCode": 2638,
+        "Validated": 0
+      }
+    },
+    {
+      "PK_User": 206924,
+      "PK_Account": 11214014,
+      "PK_PermissionRole": 13,
+      "Username": "gigicon11",
+      "Email": "gigicon11@yopmail.com",
+      "ValidationCode": 6869,
+      "Validated": 0,
+      "EmailAlerts": 0,
+      "EmailNews": 0,
+      "EmailNotifications": 1,
+      "PhoneNotifications": 1,
+      "PushNotifications": 0,
+      "PK_Oem_User": "",
+      "Devices": "[55000307]",
+      "Created": "2019-06-24 05:45:34",
+      "Blocked": 0,
+      "PK_Language": 1,
+      "Phone": {
+        "ValidationCode": 3275,
+        "Validated": 0
+      }
+    },
+    {
+      "PK_User": 206934,
+      "PK_Account": 11214014,
+      "PK_PermissionRole": 9,
+      "Username": "gigicon12",
+      "Email": "gigicon12@yopmail.com",
+      "ValidationCode": 7876,
+      "Validated": 0,
+      "EmailAlerts": 0,
+      "EmailNews": 0,
+      "EmailNotifications": 1,
+      "PhoneNotifications": 1,
+      "PushNotifications": 0,
+      "PK_Oem_User": "",
+      "Devices": "[55000307]",
+      "Created": "2019-06-24 05:46:59",
+      "Blocked": 0,
+      "PK_Language": 1,
+      "Phone": {
+        "ValidationCode": 7284,
+        "Validated": 0
+      }
+    }
+  ]
+}
