@@ -27,6 +27,15 @@
               </span>
             </router-link>
           </li>
+          <li>
+            <router-link to="/users">
+              <span class="is-uppercase">
+                <i>
+                  <i class="fas fa-user"></i>
+                </i>&nbsp;&nbsp;Users
+              </span>
+            </router-link>
+          </li>
         </ul>
       </nav>
     </div>
@@ -70,6 +79,15 @@
                           <i>
                             <i class="fas fa-charging-station"></i>
                           </i>&nbsp;&nbsp;Devices
+                        </span>
+                      </router-link>
+                    </li>
+                    <li class="has-text-left">
+                      <router-link to="/users" @click.native="toggleMenuClick">
+                        <span class="is-uppercase">
+                          <i>
+                            <i class="fas fa-user"></i>
+                          </i>&nbsp;&nbsp;Users
                         </span>
                       </router-link>
                     </li>
