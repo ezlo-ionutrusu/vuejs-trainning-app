@@ -1,16 +1,11 @@
 <template>
   <div class="app">
-    <left-side/>
-    <div class="right-side">
-      <router-view/>
-    </div>
+    <router-view/>
   </div>
 </template>
 <script>
 export default {
-  components: {
-    'left-side': () => import('@/common/containers/Left-side/index'),
-  },
+  components: {}
 };
 </script>
 <style lang="scss">
