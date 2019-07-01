@@ -1,5 +1,9 @@
 export const getUsersData = state => state.usersData;
 
-const getters = { getUsersData };
+const getters = {
+  getUsersData
+};
 
-export default { getters };
+export default {
+  getters
+};

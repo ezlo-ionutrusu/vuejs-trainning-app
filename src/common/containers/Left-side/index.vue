@@ -10,7 +10,7 @@
       <nav class="nav-menu">
         <ul>
           <li>
-            <router-link to="/">
+            <router-link to="/dashboard">
               <span class="is-uppercase">
                 <i>
                   <i class="fas fa-home"></i>
@@ -19,7 +19,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/devices">
+            <router-link to="/dashboard/devices">
               <span class="is-uppercase">
                 <i>
                   <i class="fas fa-charging-station"></i>
@@ -28,13 +28,31 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/users">
+            <router-link to="/dashboard/users">
               <span class="is-uppercase">
                 <i>
                   <i class="fas fa-user"></i>
                 </i>&nbsp;&nbsp;Users
               </span>
             </router-link>
+          </li>
+          <li class="has-text-left">
+            <router-link to="/dashboard/settings">
+              <span class="is-uppercase">
+                <i>
+                  <i class="fas fa-cogs"></i>
+                </i>&nbsp;&nbsp;Settings
+              </span>
+            </router-link>
+          </li>
+          <li>
+            <a @click="logOut">
+              <span class="is-uppercase">
+                <i>
+                  <i class="fas fa-sign-out-alt"></i>
+                </i>&nbsp;&nbsp;Logout
+              </span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -65,7 +83,7 @@
                 <div class="tabs">
                   <ul>
                     <li class="has-text-left">
-                      <router-link to="/" @click.native="toggleMenuClick">
+                      <router-link to="/dashboard" @click.native="toggleMenuClick">
                         <span class="is-uppercase">
                           <i>
                             <i class="fas fa-home"></i>
@@ -74,7 +92,7 @@
                       </router-link>
                     </li>
                     <li class="has-text-left">
-                      <router-link to="/devices" @click.native="toggleMenuClick">
+                      <router-link to="/dashboard/devices" @click.native="toggleMenuClick">
                         <span class="is-uppercase">
                           <i>
                             <i class="fas fa-charging-station"></i>
@@ -83,13 +101,31 @@
                       </router-link>
                     </li>
                     <li class="has-text-left">
-                      <router-link to="/users" @click.native="toggleMenuClick">
+                      <router-link to="/dashboard/users" @click.native="toggleMenuClick">
                         <span class="is-uppercase">
                           <i>
                             <i class="fas fa-user"></i>
                           </i>&nbsp;&nbsp;Users
                         </span>
                       </router-link>
+                    </li>
+                    <li class="has-text-left">
+                      <router-link to="/dashboard/settings">
+                        <span class="is-uppercase">
+                          <i>
+                            <i class="fas fa-cogs"></i>
+                          </i>&nbsp;&nbsp;Settings
+                        </span>
+                      </router-link>
+                    </li>
+                    <li>
+                      <a @click="logOut">
+                        <span class="is-uppercase">
+                          <i>
+                            <i class="fas fa-sign-out-alt"></i>
+                          </i>&nbsp;&nbsp;Logout
+                        </span>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -107,37 +143,41 @@ export default {
   methods: {
     toggleMenuClick() {
       const mobileLinkMenu = Array.prototype.slice.call(
-        document.querySelectorAll('.navbar-burger'),
-        0,
+        document.querySelectorAll(".navbar-burger"),
+        0
       );
       if (mobileLinkMenu.length > 0) {
-        mobileLinkMenu.forEach(($el) => {
+        mobileLinkMenu.forEach($el => {
           const { target } = $el.dataset;
           const $target = document.getElementById(target);
-          $el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
+          $el.classList.toggle("is-active");
+          $target.classList.toggle("is-active");
         });
       }
     },
     addExpandCollapseEffectsToNav() {
       const mobileLinkMenu = Array.prototype.slice.call(
-        document.querySelectorAll('.navbar-burger'),
-        0,
+        document.querySelectorAll(".navbar-burger"),
+        0
       );
       if (mobileLinkMenu.length > 0) {
-        mobileLinkMenu.forEach(($el) => {
-          $el.addEventListener('click', () => {
+        mobileLinkMenu.forEach($el => {
+          $el.addEventListener("click", () => {
             const { target } = $el.dataset;
             const $target = document.getElementById(target);
-            $el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
+            $el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
           });
         });
       }
     },
+    logOut() {
+      this.$store.dispatch("login/setIsAuth", false);
+      this.$router.push({ path: "/" });
+    }
   },
   mounted() {
     this.addExpandCollapseEffectsToNav();
-  },
+  }
 };
 </script>
